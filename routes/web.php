@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/who', function () {
+    return 'welcome to fucker club';
+});
+
