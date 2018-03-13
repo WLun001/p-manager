@@ -19,3 +19,7 @@ Route::get('/who', function () {
     return 'welcome to fucker club';
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
