@@ -13,8 +13,16 @@ class CreateCommentsTable extends Migration
      */
     public function up()
     {
+        //polymorphic relationship 
+        // link comment to every db, because everything can be commen. 
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
+            $table->longText('body');
+            $table->string('url', 255)->nullable();
+            $table->integer('user_id')->unsigned();
+            $table->integer('commentable_id')->unsigned();
+            $table->string('commentable_type');
+            $table->foreign('user_id')->reference('id')->on('users');
             $table->timestamps();
         });
     }
