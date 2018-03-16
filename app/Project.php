@@ -13,4 +13,18 @@ class Project extends Model
         'user_id',
         'days',
     ];
+
+    /**
+     * Project belongs to a company
+     */
+    public function company(){
+        return $this->belongsTo('App\Models\Company');
+    }
+
+    /**
+     * Project belongs to a user
+     */
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

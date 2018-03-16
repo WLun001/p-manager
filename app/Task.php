@@ -14,4 +14,25 @@ class Task extends Model
         'hours',
         'days',
     ];
+
+    /**
+     * Task belongs to a user
+     */
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
+
+    /**
+     * Task belongs to a project
+     */
+    public function project(){
+        return $this->belongsTo('App\Models\Project');
+    }
+
+    /**
+     * Task belongs to a company
+     */
+    public function company(){
+        return $this->belongsTo('App\Models\Company');
+    }
 }
