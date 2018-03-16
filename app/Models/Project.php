@@ -18,7 +18,7 @@ class Project extends Model
      * Project belongs to a company
      */
     public function company(){
-        return $this->belongsTo('App\Models\Company');
+        return $this->belongsToMany('App\Models\Company');
     }
 
     /**

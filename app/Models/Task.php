@@ -35,4 +35,11 @@ class Task extends Model
     public function company(){
         return $this->belongsTo('App\Models\Company');
     }
+
+     /**
+     * Many tasks belongs to many users
+     */
+    public function users(){
+        return $this->belongsToMany('App\Models\User');
+    }
 }

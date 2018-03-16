@@ -37,13 +37,6 @@ class User extends Authenticatable
     //define database relationship
 
     /**
-     * User has one or many tasks
-     */
-    public function tasks(){
-        return $this->hasMany('App\Models\Task');
-    }
-
-    /**
      * User has one or many comments
      */
     public function comments(){
@@ -51,7 +44,7 @@ class User extends Authenticatable
     }
 
     /**
-     * User belongs to one role
+     * User belongs to  one role
      */
     public function role(){
         return $this->belongsTo('App\Models\Role');
@@ -62,5 +55,19 @@ class User extends Authenticatable
      */
     public function companies(){
         return $this->hasMany('App\Models\Company');
+    }
+    
+    /**
+     * Many users belongs to many tasks
+     */
+    public function tasks(){
+        return $this->belongsToMany('App\Models\Task');
+    }
+
+    /**
+     * Many users belongs to many projects
+     */
+    public function projects(){
+        return $this->belongsToMany('App\Models\Project');
     }
 }
