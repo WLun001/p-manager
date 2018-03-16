@@ -15,15 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/who', function () {
-    return 'welcome to fucker club';
-});
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('companies', 'CompaniesController');
+Route::resource('projects', 'ProjectsController');
+Route::resource('role', 'RolesController');
+Route::resource('task', 'TasksController');
+Route::resource('user', 'UsersController');
