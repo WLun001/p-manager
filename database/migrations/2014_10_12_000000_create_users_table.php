@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
     }
 
         //add row to existing db
-        Scheme::table('users', function (Blueprint $table){
+        Schema::table('users', function (Blueprint $table){
             $table->string('first_name')->nullable();
             $table->string('middle_name')->nullable();
             $table->string('last_name')->nullable();
