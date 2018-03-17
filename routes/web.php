@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Route::resource('companies', 'CompaniesController');
 Route::resource('projects', 'ProjectsController');
-Route::resource('role', 'RolesController');
-Route::resource('task', 'TasksController');
-Route::resource('user', 'UsersController');
+Route::resource('roles', 'RolesController');
+Route::resource('tasks', 'TasksController');
+Route::resource('users', 'UsersController');
