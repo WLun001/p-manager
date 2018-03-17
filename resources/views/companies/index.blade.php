@@ -1,6 +1,10 @@
+<!-- to let layout/app finds it and apply boostrap on it -->
+@extends('layouts.app')
+
+@section('content')
 <div class="panel panel-default">
- <div class"panel-heading">Panel heading without title</div>
-  <div class"panel-body">
+ <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
     <ul class="list-group">
     <li class="list-group-item">Cras justo odio</li>
     <li class="list-group-item">Dapibus ac facilisis in</li>
@@ -10,3 +14,4 @@
     </ul>
   </div>
 </div>
+@endsection
