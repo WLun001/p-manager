@@ -70,7 +70,7 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, Company $company)
     {
-        //
+            
     }
 
     /**
