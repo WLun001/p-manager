@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-sm-3 col-md-9 col-lg-9 pull-left">
+    <div class="col-sm-9 col-md-9 col-lg-9 pull-left">
       <div class="jumbotron">
         <h1>{{ $company->name }}</h1>
         <p class="lead">{{ $company->description }}</p>
