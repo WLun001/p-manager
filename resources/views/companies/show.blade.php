@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-
-
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>{{ $company->name }}</h1>
@@ -27,6 +24,5 @@
         <p>© 2016 Company, Inc.</p>
       </footer>
 
-    </div>
 
 @endsection 
