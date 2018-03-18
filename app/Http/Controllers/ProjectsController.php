@@ -46,7 +46,7 @@ class ProjectsController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return $this->view('projects.show', ['project' => Project::find($project->id)]);
     }
 
     /**
