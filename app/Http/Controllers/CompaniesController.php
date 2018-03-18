@@ -46,7 +46,7 @@ class CompaniesController extends Controller
      */
     public function show(Company $company)
     {
-        $company = Company::where('id', $company->id);
+        $company = Company::where('id', $company->id)->first();
         return view('companies.show', ['company' => $company]);
     }
 
