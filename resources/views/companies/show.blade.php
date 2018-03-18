@@ -11,7 +11,7 @@
 
      <div class="row" style="background:white; margin: 4px;">
      @foreach($company->projects as $project)
-        <div class="col-lg-4">
+        <div class="col-sm-4 col-md-4 col-lg-4">
           <h2>{{ $project->name }}</h2>
           <p class="text-danger">As of v9ur broeshing.</p>
           <p>{{ $project->description}} </p>
@@ -31,7 +31,7 @@
          <div class="sidebar-module">
             <h4>Actions</h4>
             <ol class="list-unstyled">
-              <li><a href="#">Edit</a></li>
+              <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
               <li><a href="#">Delete</a></li>
               <li><a href="#">Add New Member</a></li>
             </ol>

@@ -58,7 +58,7 @@ class CompaniesController extends Controller
      */
     public function edit(Company $company)
     {
-        //
+        return view('companies.edit', ['company' => Company::find($company->id)]);
     }
 
     /**
