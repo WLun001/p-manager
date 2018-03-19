@@ -71,7 +71,7 @@ class CompaniesController extends Controller
     public function update(Request $request, Company $company)
     {
         //update data
-        $companyUpdate = Company::where('id', $company->id)
+        $companyUpdate = Company::find($company->id)
                                     ->update([
                                         'name' => $request->input('name'),
                                         'description' => $request->input('description'),
