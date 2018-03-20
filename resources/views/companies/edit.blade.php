@@ -53,8 +53,8 @@
          <div class="sidebar-module">
             <h4>Actions</h4>
             <ol class="list-unstyled">
-              <li><a href="/companies/{{ $company->id }}">View companies</a></li>
-              <li><a href="/companies">All companies</a></li>
+              <li><a href="/companies/{{ $company->id }}">View Companies</a></li>
+              <li><a href="/companies">List of Companies</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
