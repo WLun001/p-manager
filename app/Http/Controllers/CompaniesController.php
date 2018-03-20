@@ -42,14 +42,13 @@ class CompaniesController extends Controller
                 'description' => $request->input('description'),
                 'user_id' => Auth::user()->id
             ]);
+            if($company){
+                return redirect()->route('companies.show', ['company'=> $company->id])
+                ->with('success' , 'Company created successfully');
+            }
         }
-
-        if($company){
-            return redirect()->route('companies.show', ['company' => $company->id])
-                            ->with('success', 'Succesfully create company');
-        }
-
-        return back()->withInput()->with('error', 'Company could not be created');;
+        
+            return back()->withInput()->with('errors', 'Error creating new company');
     }
 
     /**
@@ -114,6 +113,6 @@ class CompaniesController extends Controller
             return redirect()->route('companies.index')->with('success', "Company succesfully deleted");
         }
 
-        return back()->withInput()->with('error', 'Company could not be deleted');
+        return back()->withInput()->with('errors', 'Company could not be deleted');
     }
 }
