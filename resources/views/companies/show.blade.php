@@ -31,7 +31,10 @@
          <div class="sidebar-module">
             <h4>Actions</h4>
             <ol class="list-unstyled">
-              <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
+              <li><a href="/companies/{{ $company->id }}/edit">Edit Company</a></li>
+              <li><a href="/companies/create">Create New Company</a></li>
+              <li><a href="/companies">List of Companies</a></li>
+              <li><a href="/projects/create">Add Project</a></li>
               <li>
                <a href="#"
                     onclick="
@@ -39,7 +42,7 @@
                     if(result){
                        event.preventDefault();
                        document.getElementById('delete-form').submit();
-                    }">Delete</a>
+                    }">Delete Company</a>
               <form id="delete-form" action="{{ route('companies.destroy', [$company->id]) }}"
                     method="post" style="display: none;">
                     <input type="hidden" name="_method" value="delete">
@@ -52,7 +55,6 @@
 
 
 
-              <li><a href="#">Add New Member</a></li>
             </ol>
           </div>
           <div class="sidebar-module">
