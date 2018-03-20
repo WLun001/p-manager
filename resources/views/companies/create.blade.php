@@ -5,12 +5,8 @@
     <div class="col-sm-9 col-md-9 col-lg-9 pull-left">
 
      <div class="row col-sm-12 col-md-12 col-lg-12" style="background:white; margin: 4px;">
-     <form method="get" action="{{ route('companies.create') }}">
+     <form method="post" action="{{ route('companies.store') }}">
        {{ csrf_field() }}
-
-        <!-- html form can only take 'get' and 'post' request, to do other than that, have to use hidden
-        in this case is 'put' -->
-       <input type="hidden" name="_method" value="put">
 
        <div class="form-group">
         <label for="company-name">Name <span class="required">*</span></label>
